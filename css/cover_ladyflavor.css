@@ -1,0 +1,7 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+a:link,:visited,:hover,:active{
+    color:#000000;
+}
