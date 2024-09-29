@@ -5,3 +5,23 @@ body{
 a:link,:visited,:hover,:active{
     color:#000000;
 }
+
+/* .navbar{
+    position: fixed;
+    display:flex;
+    height: 100px;
+    width: 100%;
+    background-color: gray;
+    padding: 0 20px;
+}
+
+.NavigationBar{
+    position: absolute;
+} */
+
+.navbar-logo{
+    width: 200px;
+}
+
+
+

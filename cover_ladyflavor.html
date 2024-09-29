@@ -3,31 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <link rel="stylesheet" href="css/cover_ladyflavor.css"/>
-    <title>Pet Home</title>
+    <title>ladyflavor</title>
 </head>
 <body>
     <!-- desktop 導覽列 -->
-    <nav class="NavigationBar mod-desktop visible-lg">
-        <div class="NavigationBar-container">
-            <ul class="NavigationBar-actionMenu pull-left">
-                ::befor
-                <li class="list-item">
-                    ::marker
-                    <div></div>
+    <nav>
+        <div class="navbar">
+            <a href="/"><img class="navbar-logo" src="https://img.shoplineapp.com/media/image_clips/5ea8108ce10bd700337ebf32/original.png?1588072588"></a>
+            <ul class="nav-content">
+                <li class="List-item dropdown">
+                    <a class="Label">好味主食罐</a>
+                    <ul class="dropdown">
+                        <li class="List-item"><a class="Label" href="/">1+1滴雞精⁺貓肉泥主食罐</a></li>
+                        <li class="List-item"><a class="Label" href="/">1+1益生菌半濕食主食罐</a></li>
+                        <li class="List-item"><a class="Label" href="#">1+1貓奶粉⁺幼母貓主食罐</a></li>
+                        <li class="List-item"><a class="Label" href="#">1+1原肉塊⁺貓鮮食主食罐</a></li>
+                    </ul>
+                </li>
+                <li class="List-item dropdown">
+                    <a class="Label" href="/">鮮食必需品</a>
+                    <ul class="dropdown">
+                        <li class="List-item"><a class="Label" href="#">鮮食調味料｜經典海陸</a></li>
+                        <li class="List-item"><a class="Label" href="#">鮮食調味料｜濃醇香雞．保健加強版</a></li>
+                        <li class="List-item"><a class="Label" href="#">好味貓鮮食綜合營養粉</a></li>
+                        <li class="List-item"><a class="Label" href="#">好味貓食譜</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="Label" href="/">好味貓零食</a>
+                    <ul class="dropdown">
+                        <li class="List-item"><a class="Label" href="#">好味貓凍乾</a></li>
+                        <li class="List-item"><a class="Label" href="#">好味貓補丁</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown"></li>
+                    <a class="Label" href="/">好味貓保養</a>
+                    <ul class="dropdown">
+                        <li class="List-item"><a class="Label" href="#">好味貓保養凍乾</a></li>
+                        <li class="List-item"><a class="Label" href="#">貓日常保養系列</a></li>
+                        <li class="List-item"><a class="Label" href="#">好味鮮食化毛膏</a></li>
+                        <li class="List-item"><a class="Label" href="#">好味鮮食營養膏</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown"></li>
+                    <a class="Label" href="/">好味貓物</a>
+                    <ul class="dropdown">
+                        <li class="List-item"><a class="Label" href="#">好味貓懶骨頭｜好評升級版</a></li>
+                        <li class="List-item"><a class="Label" href="#">2025好味貓日曆</a></li>
+                        <li class="List-item"><a class="Label" href="#">好味肉墊味貓草包</a></li>
+                        <li class="List-item"><a class="Label" href="#">好味調味匙</a></li>
+                        <li class="List-item"><a class="Label" href="#">本丸to do本</a></li>
+                        <li class="List-item"><a class="Label" href="#">橘皮週記本</a></li>
+                        <li class="List-item"><a class="Label" href="#">米香小本本</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown"></li>
+                    <a class="Label" href="/">所有商品</a>
+                    <ul class="dropdown">
+                    </ul>
+                </li>
+                <li class="nav-item dropdown"></li>
+                    <a class="Label" href="/">關於我們</a>
+                    <ul class="dropdown">
+                        <li class="List-item"><a class="Label" href="#">品牌故事</a></li>
+                        <li class="List-item"><a class="Label" href="#">會員制度</a></li>
+                        <li class="List-item"><a class="Label" href="#">常見問題</a></li>
+                        <li class="List-item"><a class="Label" href="#">合作店家</a></li>
+                    </ul>
                 </li>
             </ul>
-            <a class="NavigationBar-logo" href="/" style="background-image: url(https://)"></a>
+            
             <ul class="NavigationBar-actionMenu pull-right">
-                ::befor
+                <!-- Search -->
                 <li class="list-item">
-                    <a href="/" class="NavigationBar-actionMenu-button"><span>::befor</span></a>
+                    <div class="NavigationBar-actionMenu-button Product-searchField">
+                        <form>
+                            <input maxlength="100" placeholder="找商品">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
                 </li>
+                <!-- Sign-in button -->
                 <li class="list-item">
-                    <a href="/" class="NavigationBar-actionMenu-button"><span>::befor</span></a>
+                    <a href="/user/sign_in" class="NavigationBar-actionMenu-button"><span class="fa fa-user">::befor</span></a>
                 </li>
+                <!-- Cart panel toggle -->
                 <li class="list-item">
-                    <a href="/" class="NavigationBar-actionMenu-button"><span>::befor</span></a>
+                    <a href="/" class="NavigationBar-actionMenu-button"><span class="fa fa-shopping-cart">::befor</span></a>
                 </li>
             </ul>
         </div>
