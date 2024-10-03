@@ -3,8 +3,8 @@ body{
     overflow-x: hidden;  /* 隱藏橫向滾動條 */
     /* box-sizing: border-box; */
     font-size: large;
-    color: #526a6e;
-    font-family: 'Roboto', 'Noto Sans TC', '微軟正黑體', 'Arial', sans-serif;
+    color: rgba(0, 0, 0, 0.9);
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Cantarell, 'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Lucida Grande', Helvetica, Arial, sans-serif;
 }
 
 nav{
@@ -14,7 +14,7 @@ nav{
 }
 
 main{
-    
+    margin: auto;
 }
 
 section{
@@ -23,22 +23,11 @@ section{
     margin: auto;
     display: flex;
     position: relative;
+    align-items:center;
 }
 
-.padding60{
-    padding: 60px 0px;
-}
-
-a, span{
-    color: #0a66c2;
-    font-weight: 900;
-}
-
-a:visited, a:link, a:active {
+a:hover, a:visited, a:link, a:active {
     text-decoration: none;
-}
-a:hover {
-    border-bottom:1px solid;
 }
 
 h1{
@@ -52,20 +41,29 @@ h2{
     margin: 0px;
 }
 
-.header{
-    font-size: 2rem; font-weight: 400; color:#526a6e;
+ul{
+    padding: 0px;
 }
 
+li{
+    list-style: none; /* 去掉項目符號 */
+    text-align: left;
+}
+
+.header{
+    font-size: 2rem; font-weight: 400; color:rgba(0, 0, 0, 0.9);
+}
+
+.padding60{ padding: 60px 0px; }
+
+/*  */
 .start{
-    height: 560px; width: 55%;
-    padding-top: 48px;
+    width: 55%;
     padding-right: 48px;
     flex-shrink:0;
 }
 
-.start-img{
-    height: 560px;
-}
+.start-img{ height: 560px; }
 
 .login-block{
     width: 400px; height: 200px;
@@ -78,22 +76,48 @@ h2{
     position: relative;
     margin-top: 24px;
     padding: 2px 10px;
-    border: 1px gray solid; border-radius: 25px;
+    border: 1px rgb(128, 128, 128) solid; border-radius: 25px;
     font-size: small;
 }
 
-.button-gray{
-    height: 38px;
-    padding: 12px 24px;
-    margin: 0px 8px 12px;
-    border: 1px gray solid; border-radius: 25px;
+.login-button:hover{
+    background-color: rgba(128, 128, 128, 0.1);
 }
 
-.button-blue{
+.login-button span{
+    font-weight: 900;
+}
+
+.a-button-gray{
     height: 38px;
     padding: 12px 24px;
-    margin: 0px 8px 12px;
+    margin-right: 8px; 
+    margin-bottom: 12px;
+    border: 1px gray solid; border-radius: 25px;
+    color: #0a66c2; font-weight: 900;
+}
+
+.a-button-blue{
+    height: 38px;
+    padding: 12px 24px;
+    margin-right: 8px; 
+    margin-bottom: 12px;
     border: 1px #0a66c2 solid; border-radius: 25px;
+    color: #0a66c2; font-weight: 900;
+}
+
+.a-button-blue-b{
+    height: 38px;
+    padding: 12px 24px;
+    margin-right: 8px; 
+    margin-bottom: 12px;
+    border: 1px #0a66c2 solid; border-radius: 25px;
+    background-color: #0a66c2;
+    color: #ffffff; font-weight: 900;
+}
+
+.a-button-blue:hover{
+    background-color: rgba(10, 102, 194, 0.1);
 }
 
 .border-radius-rainbow{ 
@@ -123,11 +147,29 @@ h2{
     text-align: center;
 }
 
+.login-text1 a{
+    color: #0a66c2;
+    font-weight: 900;
+}
+
+.login-text1 a:hover {
+    border-bottom:1px solid;
+}
+
 .login-text2{
     width: 400px; height: 48px;
     margin: 16px;
     text-align: center;
     font-size: 1.2rem;;
+}
+
+.login-text2 a{
+    color: #0a66c2;
+    font-weight: 900;
+}
+
+.login-text2 a:hover {
+    border-bottom:1px solid;
 }
 
 .block1::after{
@@ -159,6 +201,95 @@ h2{
     height: 132px;
 }
 
+.block2 h2{ padding-bottom: 45px; }
+
+.block3 p{ 
+    margin-top: 12px;
+    font-size: 17px;
+}
+
+.block4 p{ 
+    margin-top: 12px;
+    font-size: 17px;
+}
+
+.block7{
+    width: 50%; height: 720px;
+    padding-right:48px ;
+    flex-shrink:0;
+    align-content: center;
+}
+
+.block7::after{
+    content: '';
+    position: absolute;
+    width: calc(50% - calc((1128px - 100vw) / 2));
+    height: 720px;
+    top : 0;
+    left: calc((1128px - 100vw) / 2);
+    right: calc((1128px - 100vw) / 2);
+    background-color: #f3f2f0; 
+    z-index: -2;
+}
+
+.block7-img{
+    height: 840px;
+    margin-left: 96px;
+    align-self:center;
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.link-list li{
+    list-style: none; /* 去掉項目符號 */
+    margin-bottom: 16px;
+    width: 516px;height: 4rem;
+}
+
+.link-list a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    width: 429px; height: 2rem;
+    background-color: #f1ece5;
+    font-size: 20px; color: rgba(0, 0, 0, 0.9);
+}
+
+.block8{ height: 720px; }
+
+.block8 h2{
+    margin: 48px 0px 16px 0px;
+    padding-bottom: 16px; 
+    font-size: 48px;
+}
+
+.block8 div::after{
+    content: '';
+    position: absolute;
+    width: 100vw; height: 100%;
+    top : 30px;
+    right: calc((1128px - 100vw) / 2);
+    background-image: url("https://static.licdn.com/aero-v1/sc/h/4ezbw852t2wrgf27zl1o1qtu7"); 
+    background-position: center;
+    z-index: -2;
+}
+
+.block9{ 
+    height: 413px; 
+    margin: 24px 0px;
+}
+
+.block9::after{
+    content: '';
+    position: absolute;
+    width: 100vw; height: 100%;
+    top: 0;
+    background-color: #f3f2f0; 
+    z-index: -2;
+}
+
 footer{
     width: 1128px; height: 52px;
     margin: auto;
@@ -173,7 +304,6 @@ footer{
 }
 
 /* CSS Tools */
-
 .items-center{
 	/* 使用 flex 排列內容 */
     display: flex; 
@@ -186,5 +316,52 @@ footer{
 
 .importan-text{
     color: #b24020;
-    padding: 0px 0px 32px;
+}
+
+
+
+
+
+
+/* dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content li {
+    list-style: none; /* 去掉項目符號 */
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* 滑鼠懸停時顯示選單 */
 }
