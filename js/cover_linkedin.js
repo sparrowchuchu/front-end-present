@@ -1,17 +1,28 @@
 
-document.addEventListener("DOMContentLoaded", function() {
-    const dropbtn = document.querySelector(".dropbtn");
-    const dropdownContent = document.querySelector(".dropdown-content");
 
-    dropbtn.addEventListener("click", function() {
-        dropdownContent.classList.toggle("show");
-    });
+// document.querySelector('#showMore').addEventListener('click', function() {
+//     const hiddenText = document.querySelector('.hidden');
+//     hiddenText.classList.toggle('hidden');
 
-    window.addEventListener("click", function(event) {
-        if (!event.target.matches('.dropbtn')) {
-            if (dropdownContent.classList.contains('show')) {
-                dropdownContent.classList.remove('show');
-            }
-        }
-    });
+//     if (hiddenText.classList.contains('hidden')) {
+//         this.textContent = 'Show More';
+//     } else {
+//         this.textContent = 'Show Less';
+//     }
+// });
+
+
+
+
+document.querySelector('#showMore').addEventListener('click', function() {
+    const hiddenText = document.querySelector('.display-type');
+    hiddenText.classList.toggle('hidden');
+
+    if (hiddenText.classList.contains('hidden')) {
+        this.textContent = 'Show More';
+    } else {
+        this.textContent = 'Show Less';
+    }
 });
+
+

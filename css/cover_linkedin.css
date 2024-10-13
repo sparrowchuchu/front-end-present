@@ -23,7 +23,6 @@ section{
     margin: auto;
     display: flex;
     position: relative;
-    align-items:center;
 }
 
 a:hover, a:visited, a:link, a:active {
@@ -55,6 +54,8 @@ li{
 }
 
 .padding60{ padding: 60px 0px; }
+
+.w429{ width: 429px;}
 
 /*  */
 .start{
@@ -89,13 +90,41 @@ li{
 }
 
 .a-button-gray{
-    height: 38px;
-    padding: 12px 24px;
+    padding: 10px 21px;
     margin-right: 8px; 
     margin-bottom: 12px;
     border: 1px gray solid; border-radius: 25px;
-    color: #0a66c2; font-weight: 900;
+    color:rgba(0, 0, 0, 0.9); font-weight: 900;
 }
+
+.a-button-gray:hover{
+    background-color: rgba(128, 128, 128, 0.1);
+}
+
+.show-more-less{
+    width: 627px;
+    padding: 36px 0px 60px 0px;
+    margin-bottom: 15px;
+    align-content: center;
+}
+
+.show-more-less button{
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.show-more-less ul{ 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 36px;
+    padding-bottom: 8px;
+}
+
+.display-type {
+    display: none;
+}
+
 
 .a-button-blue{
     height: 38px;
@@ -117,7 +146,7 @@ li{
 }
 
 .a-button-blue:hover{
-    background-color: rgba(10, 102, 194, 0.1);
+    background-color: rgba(10, 102, 194, 0.001);
 }
 
 .border-radius-rainbow{ 
@@ -192,8 +221,9 @@ li{
     z-index: -2;
 }
 
-.block1{
-    height: 187px;
+.block1{ 
+    width: 429px; 
+    margin-right: 72px;
 }
 
 .block2{
@@ -279,6 +309,8 @@ li{
 .block9{ 
     height: 413px; 
     margin: 24px 0px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .block9::after{
