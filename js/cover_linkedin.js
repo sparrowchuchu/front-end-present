@@ -1,28 +1,30 @@
 
 
-// document.querySelector('#showMore').addEventListener('click', function() {
-//     const hiddenText = document.querySelector('.hidden');
-//     hiddenText.classList.toggle('hidden');
-
-//     if (hiddenText.classList.contains('hidden')) {
-//         this.textContent = 'Show More';
-//     } else {
-//         this.textContent = 'Show Less';
-//     }
-// });
-
-
-
-
-document.querySelector('#showMore').addEventListener('click', function() {
-    const hiddenText = document.querySelector('.display-type');
-    hiddenText.classList.toggle('hidden');
-
-    if (hiddenText.classList.contains('hidden')) {
-        this.textContent = 'Show More';
-    } else {
-        this.textContent = 'Show Less';
+function showMore(){
+    let showMore = document.querySelector("#showMore");
+    showMore.style.display = "none";
+    
+    let displayType = document.querySelectorAll(".display-type");
+    console.log("displayType",displayType);
+    for(let i=0; i<displayType.length; i++){
+        displayType[i].style.display = "inline";
     }
-});
+    let showLess = document.querySelector("#showLess");
+    
+    
+}
 
+function showLess(){
+    let showLess = document.querySelector("#showLess");
+    showLess.style.display = "none";
+
+    let displayType = document.querySelectorAll(".display-type");
+    console.log("displayType",displayType);
+    for(let i=0; i<displayType.length; i++){
+        displayType[i].style.display = "none";
+    }
+
+    let showMore = document.querySelector("#showMore");
+    showMore.style.display = "block";
+}
 
