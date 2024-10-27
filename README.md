@@ -33,6 +33,12 @@ calc() 函式可以在聲明CSS屬性值時執行運算。
 right: calc((1128px - 100vw) / 2);
 ```
 
+### margin-left: auto
+```
+margin-left:auto;
+```
+可以得到靠右對齊（left把所有可用空間拿走了）。
+
 
 ### flex-basis、flex-grow、flex-shrink 屬性介紹
 flex 也是將 CSS 設定於子元素上，個別調整子元素長度「伸展」、「壓縮」的比例以及基本大小。 flex 是由三個屬性組成的，分別是「flex-grow」、「flex-shrink」和「flex-basis」，如果 flex 只填了一個數值，那麼預設是調整「flex-grow」效果。

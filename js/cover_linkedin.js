@@ -52,26 +52,18 @@ function slideLeft(){
     }
 }
 
-// let content = document.querySelector(".drop-down-content");
-// function dropDown(){
-//     if (content.style.display == "block"){
-//         content.style.display = "none";
-//     } else{
-//         content.style.display = "block";
-//     }
-// }
-
 let dropBtn = document.querySelector(".drop-down-menu");
 let content = document.querySelector(".drop-down-content");
-
 let dropDown = function(evnObj){
-    if (content.style.display == "block"){
-        content.style.display = "none";
-    } else{
-        content.style.display = "block";
-    }
+    content.style.display = "block";
+    evnObj.stopPropagation();  // 停止事件冒泡
 }
 dropBtn.addEventListener("click",dropDown);
+document.addEventListener('click', function() {
+    if (content.style.display == "block"){
+        content.style.display = "none";
+    }
+});
 
 
 
