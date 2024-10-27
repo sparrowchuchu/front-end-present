@@ -76,10 +76,10 @@
                 </li>
             </ul>
             
-            <ul class="NavigationBar-actionMenu pull-right">
+            <ul class="nav-actionMenu">
                 <!-- Search -->
                 <li class="list-item">
-                    <div class="NavigationBar-actionMenu-button Product-searchField">
+                    <div class="nav-actionMenu-button Product-searchField">
                         <form>
                             <input maxlength="100" placeholder="找商品">
                             <button type="submit"><i class="fa fa-search"></i></button>
@@ -88,17 +88,17 @@
                 </li>
                 <!-- Sign-in button -->
                 <li class="list-item">
-                    <a href="/user/sign_in" class="NavigationBar-actionMenu-button"><span class="fa fa-user">::befor</span></a>
+                    <a href="/user/sign_in" class="nav-actionMenu-button"><span class="fa fa-user">::befor</span></a>
                 </li>
                 <!-- Cart panel toggle -->
                 <li class="list-item">
-                    <a href="/" class="NavigationBar-actionMenu-button"><span class="fa fa-shopping-cart">::befor</span></a>
+                    <a href="/" class="nav-actionMenu-button"><span class="fa fa-shopping-cart">::befor</span></a>
                 </li>
             </ul>
         </div>
     </nav>
     <!-- 購物車金額等於0， display:none  -->
-    <div class="CartPanel sidr left" style="display:none">
+    <div class="CartPanel" style="display:none">
         <div class="CartPanel-section">
             <div class="CartPanel-header">購物車</div>
             <div ng-controller="CartsController" class="ng-scope">
@@ -110,6 +110,7 @@
     <nav class="NavigationBar mod-mobile hidden-lg">
 
     </nav>
+    <!-- 輪播頁面 -->
     <iframe allow="" data-tagging-id="" data-load-time="1727496095696" height="" width="" src="" style="display: none; visibility: hidden;"></iframe>
     <div data-ride="carousel" data-interval="6000" data-pause="null">
         <div role="listbox"></div>
