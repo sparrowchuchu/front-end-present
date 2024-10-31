@@ -1,0 +1,98 @@
+/* Template */
+body{
+    margin: 0px;  /* 清除預設的 margin */
+    overflow-x: hidden;  /* 隱藏橫向滾動條 */
+    box-sizing: border-box;
+    font-size: large;
+    color: rgba(0, 0, 0, 0.9);
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Cantarell, 'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Lucida Grande', Helvetica, Arial, sans-serif;
+}
+
+nav{
+    position: absolute;
+    top:0;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+header{
+    width: 600px;
+    margin: 100px auto 0px auto;
+}
+ul{display: flex; margin: 10px;}  /* 使 li 水平排列 */
+li{list-style: none; text-align: left;}
+
+/* section */
+.nav-bar{
+    width: 80vw;
+    display: flex;
+    justify-content:space-between; 
+}
+.nav-lists{
+    li{
+        width: 170px; min-width: 50px;
+        display: flex;
+        align-items: center;
+        img{width: 20px;height: 20px;}
+        span{
+            padding-left: 7px;
+            color: rgba(0, 0, 0, 0.9);
+            font-size: 18px;font-weight: 600;
+        }
+    }
+}
+
+.nav-login{
+    .s-input{width: 250px;}
+    li{
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{width: 20px;height: 20px;}
+    }
+}
+
+
+/* feature */
+.center{
+    display: flex; 
+    justify-content: center;  /* 控制水平排列的方式 */
+    align-items: center;  /* 控制垂直排列的方式 */
+}
+.accent{
+    background: -webkit-linear-gradient(315deg,#42d392 25%,#ffce64);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
+}
+
+
+/* RWD */
+.mod-desktop{display: block;}
+.mod-mobile{display: block;}
+
+
+
+/* @media 順序很重要 */
+@media(max-width:1250px){
+    /* 桌機螢幕最小 1280px */
+    /* 平板螢幕設定 */
+    /* 幕寬度小於 1250px，套用這個區塊的CSS */
+    
+}
+
+@media(max-width:500px){
+    /* 幕寬度小於 500px，套用這個區塊的CSS */
+    /* 最小的手機 360px */
+    .mod-desktop{display: none;}
+    .nav-lists{
+        margin-top: 10px;
+        li{
+            width:12%;
+        }
+        li:hover{
+            width:35%;
+        }
+    }
+}
