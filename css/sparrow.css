@@ -1,28 +1,38 @@
-/* Template */
+:root{
+    /* 宣告：--名稱: 值; */
+    --h1-color: #333333;    
+    --p-color: #006;    
+    --sub-color: rgba(0, 0, 0, 0.9);    
+    --content-weight:600px;
+}
+
+/* LayOut Template */
 body{
     margin: 0px;  /* 清除預設的 margin */
     overflow-x: hidden;  /* 隱藏橫向滾動條 */
     box-sizing: border-box;
     font-size: large;
-    color: rgba(0, 0, 0, 0.9);
+    color: var(--sub-color);;
     font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Cantarell, 'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Lucida Grande', Helvetica, Arial, sans-serif;
 }
 
 nav{
-    position: absolute;
+    position: fixed;
     top:0;
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.05);
+    width: 100vw;height: 50px;
+    background-color: rgb(216, 216, 216);
+    z-index: 10;
 }
 
 header{
-    width: 600px;
+    width: var(--content-weight);
     margin: 100px auto 0px auto;
+    color: var(--h1-color);
 }
-ul{display: flex; margin: 10px;}  /* 使 li 水平排列 */
+ul{display: flex; margin: 0px;}  /* 使 li 水平排列 */
 li{list-style: none; text-align: left;}
 
-/* section */
+/* nav */
 .nav-bar{
     width: 80vw;
     display: flex;
@@ -33,34 +43,110 @@ li{list-style: none; text-align: left;}
         width: 170px; min-width: 50px;
         display: flex;
         align-items: center;
-        img{width: 20px;height: 20px;}
+        cursor: pointer;
         span{
             padding-left: 7px;
-            color: rgba(0, 0, 0, 0.9);
+            color: var(--sub-color);
             font-size: 18px;font-weight: 600;
         }
     }
+    li:hover{
+        transform: scale(1.3);
+    }
 }
-
 .nav-login{
     li{
         width: 50px;
         display: flex;
         justify-content: center;
         align-items: center;
-        img{width: 20px;height: 20px;}
+        cursor: pointer;
+        margin-left: 20px;
+    }
+    li:hover{
+        transform: scale(1.3);
     }
 }
 
+/* side menu */
+.left-side{
+    position: fixed;
+    top: 200px;
+    left: 30px;
+    z-index: 8;
+}
+.aside{  
+    transform:translateX(250px);
+    transition:0.3s ease;
+}
+.btn-s{
+    width: 35px; height: 35px;
+    border: #a0a0a0 solid 1px;
+    border-radius: 20%;
+    cursor: pointer;
+}
+
+/* carousel */
+.carousel{
+    width: var(--content-weight);
+    height: 350px;
+    margin: auto;
+}
+.slides {
+    width: inherit;height: inherit;
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* 滑動效果 */
+    margin-right: 50px;
+    img{
+        width: 80%; height: 80%;
+        object-fit: cover;
+    }
+}
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+.slides-btns{
+    position: absolute;
+    top: 50%;
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+    transform: translate(0%, -50%);
+}
+.btn-sr{
+    width: 40px;height: 40px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+.btn-sr:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+/* content */
+.content{
+    width: var(--content-weight);
+    margin: 20px auto;
+}
+
+/* footer */
+footer{
+    height:100px;
+    background-color: #42d392;
+}
 
 /* feature */
 .center{
     display: flex; 
-    justify-content: center;  /* 控制水平排列的方式 */
-    align-items: center;  /* 控制垂直排列的方式 */
+    justify-content: center;
+    align-items: center;
 }
 .accent{
-    background: -webkit-linear-gradient(315deg,#42d392 25%,#ffce64);
+    background: -webkit-linear-gradient(315deg,#42d392 25%,#c99320);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent

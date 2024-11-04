@@ -24,8 +24,8 @@ function showLess(){
 }
 
 // 
-let rightBtn = document.querySelector("#btn-right");
-let leftBtn = document.querySelector("#btn-left");
+let btnRight = document.querySelector("#btn-right");
+let btnLeft = document.querySelector("#btn-left");
 let slideLi = document.querySelectorAll(".slide-li");
 let i = 0;
 function slideRight(){
@@ -33,10 +33,10 @@ function slideRight(){
         slideLi[i].style.display = "none";
         i++;
         slideLi[i].style.display = "flex";
-        leftBtn.style.display = "block";
+        btnLeft.style.display = "block";
     }
     if (i === document.querySelectorAll(".slide-li").length - 1){
-        rightBtn.style.display = "none";
+        btnRight.style.display = "none";
     }
 }
 
@@ -45,10 +45,10 @@ function slideLeft(){
         slideLi[i].style.display = "none";
         i--;
         slideLi[i].style.display = "flex";
-        rightBtn.style.display = "block";
+        btnRight.style.display = "block";
     }
     if (i === 0){
-        leftBtn.style.display = "none";   
+        btnLeft.style.display = "none";   
     }
 }
 

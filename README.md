@@ -1,13 +1,18 @@
 # Front-End Present
 
-## Goal
--   Cover 10個網頁Layout
--   製作 1 ~ 2 個網站
+## 目的
+-   Cover 網頁Layout
+-   製作 網頁
 
 ## Cover 網頁
-1.  [Ladyflavor] 好味小姐 : 寵物食品
-2.  [LinkedIn]  領英公司 : 社群網路服務
+-  [LinkedIn]  領英公司 : 社群網路服務
 
+## 製作 網頁
+### 使用技術
+- CSS 宣告變數全域變數
+- JavaScript 互動設計
+- RWD 設計
+- 連接API
 
 ## Cover_LinkedIn 網頁切版筆記
 ### class 使用時機 : 
