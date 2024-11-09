@@ -11,14 +11,19 @@
         <div class="nav-bar">
             <ul class="nav-lists">
                 <li>
+                    <a href="/"><?xml version="1.0" encoding="UTF-8"?><svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 18V42H39V18L24 6L9 18Z" fill="none" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 29V42H29V29H19Z" fill="none" stroke="#333" stroke-width="4" stroke-linejoin="round"/><path d="M9 42H39" stroke="#333" stroke-width="4" stroke-linecap="round"/></svg></a>
+                </li>
+                <li>
                     <?xml version="1.0" encoding="UTF-8"?><svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 6H8C6.89543 6 6 6.89543 6 8V18C6 19.1046 6.89543 20 8 20H18C19.1046 20 20 19.1046 20 18V8C20 6.89543 19.1046 6 18 6Z" fill="none" stroke="#333" stroke-width="4" stroke-linejoin="round"/><path d="M18 28H8C6.89543 28 6 28.8954 6 30V40C6 41.1046 6.89543 42 8 42H18C19.1046 42 20 41.1046 20 40V30C20 28.8954 19.1046 28 18 28Z" fill="none" stroke="#333" stroke-width="4" stroke-linejoin="round"/><path d="M40 6H30C28.8954 6 28 6.89543 28 8V18C28 19.1046 28.8954 20 30 20H40C41.1046 20 42 19.1046 42 18V8C42 6.89543 41.1046 6 40 6Z" fill="none" stroke="#333" stroke-width="4" stroke-linejoin="round"/><path d="M40 28H30C28.8954 28 28 28.8954 28 30V40C28 41.1046 28.8954 42 30 42H40C41.1046 42 42 41.1046 42 40V30C42 28.8954 41.1046 28 40 28Z" fill="none" stroke="#333" stroke-width="4" stroke-linejoin="round"/></svg>
                     <span>作品分類</span>
                 </li>
             </ul>
             <ul class="nav-login">
                 <li style="width:200px;">
-                    <input maxlength="100" placeholder="使用google搜尋">
-                    <?xml version="1.0" encoding="UTF-8"?><svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 38C30.3888 38 38 30.3888 38 21C38 11.6112 30.3888 4 21 4C11.6112 4 4 11.6112 4 21C4 30.3888 11.6112 38 21 38Z" fill="none" stroke="#333" stroke-width="4" stroke-linejoin="round"/><path d="M26.657 14.3431C25.2093 12.8954 23.2093 12 21.0001 12C18.791 12 16.791 12.8954 15.3433 14.3431" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M33.2216 33.2217L41.7069 41.707" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <form action="https://www.google.com/search">
+                        <input type="text" name="q" maxlength="100" placeholder="使用google搜尋">
+                        <button><?xml version="1.0" encoding="UTF-8"?><svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 38C30.3888 38 38 30.3888 38 21C38 11.6112 30.3888 4 21 4C11.6112 4 4 11.6112 4 21C4 30.3888 11.6112 38 21 38Z" fill="none" stroke="#333" stroke-width="4" stroke-linejoin="round"/><path d="M26.657 14.3431C25.2093 12.8954 23.2093 12 21.0001 12C18.791 12 16.791 12.8954 15.3433 14.3431" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M33.2216 33.2217L41.7069 41.707" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                    </form>
                 </li>
                 <li>
                     <?xml version="1.0" encoding="UTF-8"?><svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 23C26.7614 23 29 20.7614 29 18C29 15.2386 26.7614 13 24 13C21.2386 13 19 15.2386 19 18C19 20.7614 21.2386 23 24 23Z" fill="none" stroke="#333" stroke-width="4" stroke-linejoin="round"/><path d="M10.022 38.332C10.3657 33.1206 14.7016 29 20 29H28C33.2914 29 37.6229 33.1097 37.9767 38.3113" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -51,20 +56,40 @@
             <button class="btn-sr" id="nextBtn">❯</button>
         </div>
     </div>
-    <div  class="content">
-        <h3>及時天氣資訊<p>氣象資料開放平臺</p></h3>
+    <div class="content">
+        <h3>及時天氣資訊<span class="subTitle">氣象資料開放平臺</span></h3>
         <div>
-            <div>
-                <ul class="flex-list" id="cities"></ul>
-                <button class="btn-blue center" id="showMore" onclick="showMore()">展開</button>
-                <button class="btn-blue center display-type" id="showLess" onclick="showLess()">收回</button>
-            </div>  
-            <div class="" id="weather-list" onclick="getWeatherData()">
-
+            <div class="content-sub">
+                <span class="keyword">地區</span>今明 36 小時天氣預報
+                <div class="flex-list" id="weather">
+                    <div class="cube">
+                        <h4>時間區段一</h4>
+                        <div>23度C - 27度C</div>
+                        <div>陰短暫雨</div>
+                        <div>降雨機率 30%</div>
+                        <div>舒適</div>
+                    </div>
+                    <div class="cube">
+                        <h4>時間區段二</h4>
+                        <div>23度C - 27度C</div>
+                        <div>陰短暫雨</div>
+                        <div>降雨機率 30%</div>
+                        <div>舒適</div>
+                    </div>
+                    <div class="cube">
+                        <h4>時間區段三</h4>
+                        <div>23度C - 27度C</div>
+                        <div>陰短暫雨</div>
+                        <div>降雨機率 30%</div>
+                        <div>舒適</div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div>
-            
+            <div class="">
+                <ul class="flex-list" id="cities"></ul>
+                <button class="btn-blue height-type mg-left" id="showMore" onclick="showMore()">展開</button>
+                <button class="btn-blue height-type display-type mg-left" id="showLess" onclick="showLess()">收回</button>
+            </div>
         </div>
     </div>
     <div class="content">

@@ -19,30 +19,34 @@ setInterval(() => {
 }, 6000);  // 每6秒自動切換
 
 /* fetch API */
+let authorization  = cwaApi;
+let src = "https://opendata.cwa.gov.tw/api/v1/rest/datastore/F-C0032-001";  // 今明 36 小時天氣預報
+src += "?authorization=" + authorization;  // 加入參數 authorization
+
 async function getWeatherData(){
-    let authorization  = cwaApi;
-    // 今明 36 小時天氣預報
-    let src = "https://opendata.cwa.gov.tw/api/v1/rest/datastore/F-C0032-001";
-    // 加入參數 authorization
-    src += "?authorization=" + authorization;
     let response = await fetch(src);
     let data = await response.json();
-    console.log(data);
+    let location = data.records.location;
     let city = document.querySelector("#cities");
     city.innerHTML = "";
-    let location = data.records.location;
-    console.dir(city);
     location.forEach((loc,i) => {
         let special = ["臺北市", "高雄市","新北市", "臺中市", "臺南市", "桃園市"];
-        console.log(loc);
         if (special.includes(loc.locationName)){
-            city.innerHTML += "<li class='btn-blue center'>" + loc.locationName + "</li>"
+            city.innerHTML += "<li class='btn-blue center' onclick(" + ")>" + loc.locationName + "</li>"
         }else{
-            city.innerHTML += "<li class='btn-blue center display-type'>" + loc.locationName + "</li>"
+            city.innerHTML += "<li class='btn-blue center display-type' onclick(" + ")>" + loc.locationName + "</li>"
         }
     });
+    console.log(location[5].weatherElement);
+    let weather = document.querySelector("#weather");
+    location[5].weatherElement.forEach((i) =>{
+        console.log(i.time);
+    })
+    weather.innerHTML += "";
 }
+
 document.addEventListener('DOMContentLoaded', getWeatherData());
+
 
 /*  */
 function showMore(){

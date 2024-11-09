@@ -3,7 +3,10 @@
     --h1-color: #333333;    
     --p-color: #006;    
     --sub-color: rgba(0, 0, 0, 0.9);    
-    --content-weight:650px;
+    --content-weight: 1000px;
+    --content-sub-weight: 850px;
+    --nav-bg-color: #bbcf47;
+    --margin-left: 64px;
 }
 
 /* LayOut Template */
@@ -20,25 +23,50 @@ nav{
     position: fixed;
     top:0;
     width: 100vw;height: 50px;
-    background-color: rgb(216, 216, 216);
+    background-color: var(--nav-bg-color);
     z-index: 10;
 }
 
 header{
     width: var(--content-weight);
-    margin: 100px auto 0px auto;
+    margin: 100px auto 0px 64px;
     color: var(--h1-color);
 }
 ul{display: flex; margin: 0px;}  /* 使 li 水平排列 */
 li{list-style: none; text-align: left;}
 
-p{
+button{font-size: 14px;}
+
+form{
+    display: flex;
+    button{
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        margin-right: 16px;
+        background-color: var(--nav-bg-color);
+        border: none;
+        input{
+            background-color:var(--nav-bg-color);
+            border: none;
+        }
+    }
+    li:hover{
+        transform: scale(1.1);
+    }
+}
+
+.subTitle{
     margin-left: 36px;
     padding-left: 8px;
     color: var(--sub-color);
     font-size: 16px;
     border-left: #333 solid 2px;
 }
+
+.wInherit{width: inherit;}
 
 /* nav */
 .nav-bar{
@@ -48,15 +76,10 @@ p{
 }
 .nav-lists{
     li{
-        width: 170px; min-width: 50px;
+        min-width: 50px;
         display: flex;
         align-items: center;
         cursor: pointer;
-        span{
-            padding-left: 7px;
-            color: var(--sub-color);
-            font-size: 18px;font-weight: 600;
-        }
     }
     li:hover{
         transform: scale(1.1);
@@ -69,7 +92,11 @@ p{
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        margin-left: 20px;
+        margin-right: 16px;
+        input{
+            background-color:var(--nav-bg-color);
+            border: none;
+        }
     }
     li:hover{
         transform: scale(1.1);
@@ -102,12 +129,13 @@ p{
     position: relative;
 }
 .slides {
-    width: inherit;height: inherit;
+    width: 100vw; height: inherit;
     display: flex;
     transition: transform 0.5s ease-in-out; /* 滑動效果 */
     margin-right: 50px;
     img{
-        width: 80%; height: 80%;
+        width: 80%; max-width: 560px;
+        height: 80%; max-height: 280px;
         object-fit: cover;
     }
 }
@@ -118,7 +146,9 @@ p{
 .slides-btns{
     position: absolute;
     top: 50%;
-    width: inherit;
+    width: var(--content-weight) ;
+    max-width: 90vw;
+    margin: auto 60px;
     display: flex;
     justify-content: space-between;
     transform: translate(0%, -50%);
@@ -132,22 +162,29 @@ p{
     border-radius: 50%;
     transition: background-color 0.3s;
 }
-.btn-sr:hover {
-    background-color: rgba(0, 0, 0, 0.25);
-}
+.btn-sr:hover {background-color: rgba(0, 0, 0, 0.25);}
 
 /* content */
 .content{
     width: var(--content-weight);
-    margin: 20px auto;
+    margin: 32px auto 32px var(--margin-left);
 }
+
+.content-sub{
+    margin-left: 40px;
+    margin-bottom: 16px;
+}
+
+.cube{width:30vw; max-width: 200px;}
+
+
 
 /* flex-list */
 .flex-list{
+    width: 80vw; max-width: var(--content-sub-weight);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /* align-content: center; */
     li{
         cursor: pointer;
         transition: background-color 0.3s;
@@ -164,9 +201,7 @@ p{
     color: #ffffff; font-weight: 900;
 }
 
-.btn-blue:hover{
-    background-color: rgba(10, 102, 194, 0.6);
-}
+.btn-blue:hover{background-color: rgba(10, 102, 194, 0.6);}
 
 
 /* drop down */
@@ -177,6 +212,10 @@ p{
     font-size: 16px;
     border: none;
     cursor: pointer;
+}
+
+.mg-left{
+    margin-left: 40px;
 }
 
 /* footer */
@@ -198,9 +237,14 @@ footer{
     -webkit-text-fill-color: transparent
 }
 
-.display-type {
-    display: none;
+.keyword{
+    font-size: 24px; font-weight: bold;
+    color: #0a66c2;
+    padding: 0 10px;
 }
+.display-type {display: none;}
+
+.height-type{height: unset;}
 
 
 /* RWD */
