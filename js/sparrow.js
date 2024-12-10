@@ -32,9 +32,9 @@ async function getWeatherData(){
     location.forEach((loc,i) => {
         let special = ["臺北市", "高雄市","新北市", "臺中市", "臺南市", "桃園市"];
         if (special.includes(loc.locationName)){
-            city.innerHTML += "<li class='btn-blue center' onclick(" + ")>" + loc.locationName + "</li>"
+            city.innerHTML += "<li class='btn-blue center' onclick=showData(" + i + ")>" + loc.locationName + "</li>"
         }else{
-            city.innerHTML += "<li class='btn-blue center display-type' onclick(" + ")>" + loc.locationName + "</li>"
+            city.innerHTML += "<li class='btn-blue center display-type' onclick=showData(" + i + ")>" + loc.locationName + "</li>"
         }
     });
     console.log(location[5].weatherElement);
@@ -46,6 +46,7 @@ async function getWeatherData(){
 }
 
 document.addEventListener('DOMContentLoaded', getWeatherData());
+
 
 
 /*  */
