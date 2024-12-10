@@ -6,9 +6,11 @@
 
 ## Cover 網頁
 -  [LinkedIn]  領英公司 : 社群網路服務
+-  [openmuseum]  開放博物館 : 數位博物園區
 
 ## 製作 網頁
 ### 使用技術
+- SEO優化 : 參考"開放博物館" Head Tag
 - CSS 宣告變數全域變數
 - JavaScript 互動設計
 - RWD 設計
@@ -111,8 +113,9 @@ row-gap: <length> | <percentage>;
 
 
 
-  [Ladyflavor]: https://www.ladyflavor.com/        "Ladyflavor"
-  [LinkedIn]:https://tw.linkedin.com/              "LinkedIn"
-
+[Ladyflavor]: https://www.ladyflavor.com/ "Ladyflavor"
+[LinkedIn]:https://tw.linkedin.com/ "LinkedIn"
+[openmuseum]:https://openmuseum.tw/ "開放博物館"
+[syntrend]:https://www.syntrend.com.tw/ "三創生活"
 
   
