@@ -27,26 +27,52 @@ async function getWeatherData(){
     let response = await fetch(src);
     let data = await response.json();
     let location = data.records.location;
-    let city = document.querySelector("#cities");
-    city.innerHTML = "";
+    let locElement = document.querySelector("#loc");
+    let weatherElement = document.querySelectorAll(".cube");
+    let cityElement = document.querySelector("#cities");
+    console.log(location[5].locationName);
+    locElement.innerHTML += location[5].locationName;  // 臺北市
+    console.log(weatherElement);
+    
+    weatherElement[0].innerHTML = "<h4>" + location[5].weatherElement[0].time[0].startTime + "</h4><h4>" + location[5].weatherElement[0].time[0].endTime + "</h4>" + 
+                                "<div>" + location[5].weatherElement[2].time[0].parameter.parameterName + "°C - " + location[5].weatherElement[4].time[0].parameter.parameterName + "°C</div>" +
+                                "<div>"+ location[5].weatherElement[0].time[0].parameter.parameterName +"</div>"+
+                                "<div>降雨機率 : " + location[5].weatherElement[1].time[0].parameter.parameterName + "%</div>"+
+                                "<div>" + location[5].weatherElement[3].time[0].parameter.parameterName + "</div>";
+    weatherElement[1].innerHTML = "<h4>" + location[5].weatherElement[0].time[1].startTime + "</h4><h4>" + location[5].weatherElement[0].time[1].endTime + "</h4>" + 
+                                "<div>" + location[5].weatherElement[2].time[1].parameter.parameterName + "°C - " + location[5].weatherElement[4].time[1].parameter.parameterName + "°C</div>" +
+                                "<div>"+ location[5].weatherElement[0].time[1].parameter.parameterName +"</div>"+
+                                "<div>降雨機率 : " + location[5].weatherElement[1].time[1].parameter.parameterName + "%</div>"+
+                                "<div>" + location[5].weatherElement[3].time[1].parameter.parameterName + "</div>";
+    weatherElement[2].innerHTML = "<h4>" + location[5].weatherElement[0].time[2].startTime + "</h4><h4>" + location[5].weatherElement[0].time[2].endTime + "</h4>" + 
+                                "<div>" + location[5].weatherElement[2].time[2].parameter.parameterName + "°C - " + location[5].weatherElement[4].time[2].parameter.parameterName + "°C</div>" +
+                                "<div>"+ location[5].weatherElement[0].time[2].parameter.parameterName +"</div>"+
+                                "<div>降雨機率 : " + location[5].weatherElement[1].time[2].parameter.parameterName + "%</div>"+
+                                "<div>" + location[5].weatherElement[3].time[2].parameter.parameterName + "</div>";
+
+
+    location[5].weatherElement.forEach((i) =>{
+        console.log(i);
+    })
+
+    // location.forEach(loc => {
+    //     city.innerHTML += "<div>" + loc.locationName + " : " + loc.weatherElement[2].time[0].parameter.parameterName + " ~ " + loc.weatherElement[4].time[0].parameter.parameterName + " °C" + "</div>"
+    // });
+    
+
+    // 生成 Button Tag 
     location.forEach((loc,i) => {
         let special = ["臺北市", "高雄市","新北市", "臺中市", "臺南市", "桃園市"];
+        loc.innerHTML = "";
         if (special.includes(loc.locationName)){
-            city.innerHTML += "<li class='btn-blue center' onclick=showData(" + i + ")>" + loc.locationName + "</li>"
+            cityElement.innerHTML += "<li class='btn-blue center' onclick=showData(" + i + ")>" + loc.locationName + "</li>"
         }else{
-            city.innerHTML += "<li class='btn-blue center display-type' onclick=showData(" + i + ")>" + loc.locationName + "</li>"
+            cityElement.innerHTML += "<li class='btn-blue center display-type' onclick=showData(" + i + ")>" + loc.locationName + "</li>"
         }
     });
-    console.log(location[5].weatherElement);
-    let weather = document.querySelector("#weather");
-    location[5].weatherElement.forEach((i) =>{
-        console.log(i.time);
-    })
-    weather.innerHTML += "";
 }
-
+ 
 document.addEventListener('DOMContentLoaded', getWeatherData());
-
 
 
 /*  */
