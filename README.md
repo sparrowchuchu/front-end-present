@@ -18,7 +18,7 @@
 
 ## Cover_LinkedIn 網頁切版筆記
 ### class 使用時機 : 
-一種 class 表示一種 css功能。
+一種 class 表示一種 排版效果。
 ```
 .items-center{
     display: flex;
